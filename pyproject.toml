@@ -1,0 +1,27 @@
+[project]
+name = "filevo"
+version = "1.0.0"
+description = "Filevo: Conversational Document Intelligence & RLCD Generation Engine"
+readme = "README.md"
+authors = [
+    { name = "Wired-Navi0x17", email = "harshulkala14@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.7.0",
+    "torch>=2.1.0",
+    "transformers>=4.40.0",
+    "accelerate>=0.28.0",
+    "httpx>=0.27.0",
+    "pytest>=8.0.0",
+    "prompt_toolkit>=3.0.40",
+    "psutil>=5.9.0",
+]
+
+[project.scripts]
+report = "src.doc_gen.filevo_cli:main"
+filevo = "src.doc_gen.filevo_cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
